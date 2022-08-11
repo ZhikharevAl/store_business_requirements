@@ -57,3 +57,8 @@ class BasePage():
         action = ActionChains(self.driver)
         action.move_to_element(element)
         action.perform()
+
+    def action_move_to_element_with_offset(self, element, x_coords, y_coords):
+        action = ActionChains(self.driver)
+        action.move_to_element_with_offset(element, x_coords, y_coords)
+        action.perform()
