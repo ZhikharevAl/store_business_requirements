@@ -62,3 +62,6 @@ class BasePage():
         action = ActionChains(self.driver)
         action.move_to_element_with_offset(element, x_coords, y_coords)
         action.perform()
+
+    def execute_script(self, script):
+        self.driver.execute_script(script)
