@@ -3,7 +3,6 @@ from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-
 class BasePage():
     def __init__(self, driver, url):
         self.driver = driver
@@ -69,4 +68,8 @@ class BasePage():
 
     def get_current_url(self):
         return self.driver.current_url
+
+    def get_current_url_title(self):
+        get_url_title = self.driver.title
+        print(get_url_title)
 

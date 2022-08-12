@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+"""" Создание класса данных Человека """
+
 
 @dataclass
 class Person:

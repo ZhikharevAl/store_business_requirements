@@ -8,6 +8,8 @@ faker_ru = Faker('ru_RU')
 fake_en = Faker('En')
 Faker.seed()
 
+""" Генерация персональных данных """
+
 
 def generated_person():
     yield Person(

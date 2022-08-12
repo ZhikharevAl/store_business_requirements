@@ -20,12 +20,17 @@ class Locators:
     CURRENT_PRICES = (By.CSS_SELECTOR, 'span[class="ui-slider-handle ui-corner-all ui-state-default"]')
     CONTACT = (By.CSS_SELECTOR, 'a[class="button button__blue js__filterResult_link"]')
 
-
-
     """ Locators test_design_product """
 
     DESIGN_PRODUCT = (By.CSS_SELECTOR, 'a[data-handler="buy"]')
     PLACE_ON_ORDER = (By.CSS_SELECTOR, 'a[class="button button__clearGray active "]')
     CONTINUE_WITHOUT_REGISTERING = (By.CSS_SELECTOR, 'a[href="/basket.html"]')
     ORDER = (By.CSS_SELECTOR, 'input[class="button button__orange semibold js__formBoxMainButton floatRight"]')
+
+    """ Personal data """
+
+    CURRENT_ADDRESS = (By.CSS_SELECTOR, 'textarea[class="input__textarea"]')
+    PERSON = (By.CSS_SELECTOR, 'input[id="contact__ID"]')
+    PHONE = (By.CSS_SELECTOR, 'input[id="cellphone__ID"]')
+    EMAIL = (By.CSS_SELECTOR, 'input[id="email__ID"]')
 
