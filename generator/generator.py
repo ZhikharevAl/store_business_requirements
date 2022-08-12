@@ -16,4 +16,5 @@ def generated_person():
         lastname=faker_ru.last_name(),
         email=faker_ru.email(),
         mobile=faker_ru.msisdn(),
+        current_address=faker_ru.address(),
     )
