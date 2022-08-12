@@ -8,3 +8,4 @@ class Person:
     lastname: str = None
     email: str = None
     mobile: str = None
+    current_address: str = None
