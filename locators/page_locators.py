@@ -34,3 +34,5 @@ class Locators:
     PHONE = (By.CSS_SELECTOR, 'input[id="cellphone__ID"]')
     EMAIL = (By.CSS_SELECTOR, 'input[id="email__ID"]')
 
+
+

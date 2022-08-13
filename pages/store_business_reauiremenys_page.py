@@ -7,6 +7,7 @@ from utilites.logger import Logger
 from generator.generator import generated_person
 import random
 import time
+from selenium.common.exceptions import TimeoutException
 
 
 class StoreBusinessRequirementsPage(BasePage):
@@ -37,6 +38,7 @@ class StoreBusinessRequirementsPage(BasePage):
         self.action_drag_and_drop_to_element(self.element_is_visible(self.locators.CURRENT_PRICES),
                                              self.element_is_visible(self.locators.CURRENT_PRICES))
         self.element_is_visible(self.locators.CONTACT).click()
+        Logger.add_end_step(url=self.driver.current_url, method='filters_product')
 
         """ Оформление заказа"""
 
@@ -58,5 +60,10 @@ class StoreBusinessRequirementsPage(BasePage):
         self.element_is_visible(self.locators.PERSON).send_keys(full_name)
         self.element_is_visible(self.locators.PHONE).send_keys(mobile_phone)
         self.element_is_visible(self.locators.EMAIL).send_keys(email)
-
+        # нажать клавишу enter
+        # self.element_is_visible(self.locators.EMAIL).send_keys(Keys.ENTER)
+        self.driver.execute_script("window.history.go(-3)")
+        #self.driver.back()
+        time.sleep(2)
+        self.quit()
         Logger.add_end_step(url=self.driver.current_url, method='design_product')

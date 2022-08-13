@@ -41,3 +41,11 @@ class TestStore:
             test_design_product.open()
             test_design_product.design_product()
             test_design_product.design_product()
+            url_now = driver.current_url
+            print(url_now)
+            assert url_now == link2
+            print('Test design product is passed')
+
+
+
+

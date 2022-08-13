@@ -73,3 +73,6 @@ class BasePage():
         get_url_title = self.driver.title
         print(get_url_title)
 
+    # выход из браузера
+    def quit(self):
+        self.driver.quit()
